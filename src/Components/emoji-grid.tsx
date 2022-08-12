@@ -74,11 +74,11 @@ export default class EmojiGrid extends React.Component<
             }}
           >
             <ImageList cols={8} gap={4}>
-              {this.state.currentEmoji.map((item) => {
-                if (!problemChildren.includes(item)) {
+              {this.state.currentEmoji
+                .filter((item) => !problemChildren.includes(item))
+                .map((item) => {
                   return <Emoji name={item} />;
-                }
-              })}
+                })}
             </ImageList>
           </Box>
         </Container>
