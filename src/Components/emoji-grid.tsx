@@ -81,14 +81,15 @@ export default class EmojiGrid extends React.Component<EmojiProps, EmojiState> {
                 var entry = this.state.emojiData[item];
 
                 var imageName = item.replaceAll(" ", "_").toLowerCase();
+                var imageSrc = "";
                 if (
                   entry.group === "People & Body" &&
                   entry.unicodeSkintones &&
                   entry.unicodeSkintones.length > 0
                 ) {
-                  var imageSrc = `https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/${item}/Default/3D/${imageName}_3d_default.png`;
+                  imageSrc = `https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/${item}/Default/3D/${imageName}_3d_default.png`;
                 } else {
-                  var imageSrc = `https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/${item}/3D/${imageName}_3d.png`;
+                  imageSrc = `https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/${item}/3D/${imageName}_3d.png`;
                 }
 
                 return (
