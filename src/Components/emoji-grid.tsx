@@ -1,25 +1,22 @@
 import React from "react";
-import {
-  Box,
-  Container,
-  ImageList,
-  ImageListItem,
-  Tab,
-  Tabs,
-} from "@mui/material";
+import { Box, Container, ImageList, Tab, Tabs } from "@mui/material";
+import Emoji from "./emoji";
 const emojiMetadata: EmojiData = require("./metadata.json");
 
-interface EmojiProps {}
+interface EmojiGridProps {}
 
-interface EmojiState {
+interface EmojiGridState {
   currentEmoji: Array<string>;
   emojiData: EmojiData;
   emojiCategories: Array<string>;
   selectedTab: number;
 }
 
-export default class EmojiGrid extends React.Component<EmojiProps, EmojiState> {
-  constructor(props: EmojiProps) {
+export default class EmojiGrid extends React.Component<
+  EmojiGridProps,
+  EmojiGridState
+> {
+  constructor(props: EmojiGridProps) {
     super(props);
 
     const defaultSelectedTab = 0;
@@ -78,30 +75,9 @@ export default class EmojiGrid extends React.Component<EmojiProps, EmojiState> {
           >
             <ImageList cols={8} gap={4}>
               {this.state.currentEmoji.map((item) => {
-                var entry = this.state.emojiData[item];
-
-                var imageName = item.replaceAll(" ", "_").toLowerCase();
-                var imageSrc = "";
-                if (
-                  entry.group === "People & Body" &&
-                  entry.unicodeSkintones &&
-                  entry.unicodeSkintones.length > 0
-                ) {
-                  imageSrc = `https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/${item}/Default/3D/${imageName}_3d_default.png`;
-                } else {
-                  imageSrc = `https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/${item}/3D/${imageName}_3d.png`;
+                if (!problemChildren.includes(item)) {
+                  return <Emoji name={item} />;
                 }
-
-                return (
-                  <ImageListItem key={imageName}>
-                    <img
-                      src={`${imageSrc}`}
-                      srcSet={`${imageSrc}`}
-                      alt={imageName}
-                      loading="lazy"
-                    />
-                  </ImageListItem>
-                );
               })}
             </ImageList>
           </Box>
@@ -125,11 +101,28 @@ export default class EmojiGrid extends React.Component<EmojiProps, EmojiState> {
   }
 }
 
-interface EmojiData {
+// These emoji have various issues and need to be manually fixed or redirected
+const problemChildren = [
+  "Foot",
+  "Handshake",
+  "Heavy dollar sign",
+  "Man with bunny ears",
+  "Man wrestling",
+  "Mans shoe",
+  "O button blood type",
+  "Person genie",
+  "Person wrestling",
+  "Skier",
+  "Troll",
+  "Woman with bunny ears",
+  "Woman wrestling",
+];
+
+export interface EmojiData {
   [emojiName: string]: FluentEmoji;
 }
 
-interface FluentEmoji {
+export interface FluentEmoji {
   cldr: string;
   fromVersion: string;
   glyph: string;
