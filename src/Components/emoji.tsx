@@ -274,6 +274,8 @@ export default class Emoji extends React.Component<EmojiProps, EmojiState> {
     this.setState({
       modalState: {
         ...this.state.modalState,
+        selectedSkintone: Skintones.Default,
+        selectedStyle: Styles["3D"],
         isOpen: false,
       },
     });
