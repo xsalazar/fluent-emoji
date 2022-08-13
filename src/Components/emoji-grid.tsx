@@ -1,5 +1,6 @@
 import React from "react";
-import { Box, Container, ImageList, Tab, Tabs } from "@mui/material";
+import { Box, Container, Tab, Tabs } from "@mui/material";
+import { imageListItemClasses } from "@mui/material/ImageListItem";
 import Emoji from "./emoji";
 const emojiMetadata: EmojiMetadata = require("./metadata.json");
 
@@ -75,11 +76,25 @@ export default class EmojiGrid extends React.Component<
               justifyItems: "center",
             }}
           >
-            <ImageList cols={8} gap={1}>
+            <Box
+              sx={{
+                display: "grid",
+                gridTemplateColumns: {
+                  xs: "repeat(4, 1fr)",
+                  sm: "repeat(5, 1fr)",
+                  md: "repeat(7, 1fr)",
+                  lg: "repeat(7, 1fr)",
+                  xl: "repeat(8, 1fr)",
+                },
+                [`& .${imageListItemClasses.root}`]: {
+                  display: "flex",
+                },
+              }}
+            >
               {this.state.currentEmoji.map((emojiName) => {
                 return <Emoji name={emojiName} key={emojiName} />;
               })}
-            </ImageList>
+            </Box>
           </Box>
         </Container>
       </div>
