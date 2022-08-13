@@ -77,7 +77,7 @@ export default class EmojiGrid extends React.Component<
           >
             <ImageList cols={8} gap={1}>
               {this.state.currentEmoji.map((emojiName) => {
-                return <Emoji name={emojiName} />;
+                return <Emoji name={emojiName} key={emojiName} />;
               })}
             </ImageList>
           </Box>

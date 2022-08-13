@@ -125,7 +125,6 @@ export default class Emoji extends React.Component<EmojiProps, EmojiState> {
           onClick={this.openModal}
           key={emoji.cldr}
           sx={{
-            maxWidth: 64,
             borderRadius: 2,
             padding: 0.25,
             "&:hover": {
@@ -133,7 +132,13 @@ export default class Emoji extends React.Component<EmojiProps, EmojiState> {
             },
           }}
         >
-          <img src={emojiImageUrl} alt={emoji.cldr} loading="lazy" />
+          <img
+            width="32px"
+            height="32px"
+            src={emojiImageUrl}
+            alt={emoji.cldr}
+            loading="lazy"
+          />
         </ImageListItem>
 
         {/* Modal */}
@@ -231,7 +236,11 @@ export default class Emoji extends React.Component<EmojiProps, EmojiState> {
                       onChange={this.handleStyleChanged}
                     >
                       {possibleEmojiStyles.map((style) => {
-                        return <MenuItem value={style}>{style}</MenuItem>;
+                        return (
+                          <MenuItem value={style} key={style}>
+                            {style}
+                          </MenuItem>
+                        );
                       })}
                     </Select>
                   </FormControl>
