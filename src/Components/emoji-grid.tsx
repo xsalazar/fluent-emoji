@@ -1,13 +1,13 @@
 import React from "react";
 import { Box, Container, ImageList, Tab, Tabs } from "@mui/material";
 import Emoji from "./emoji";
-const emojiMetadata: EmojiData = require("./metadata.json");
+const emojiMetadata: EmojiMetadata = require("./metadata.json");
 
 interface EmojiGridProps {}
 
 interface EmojiGridState {
   currentEmoji: Array<string>;
-  emojiData: EmojiData;
+  emojiMetadata: EmojiMetadata;
   emojiCategories: Array<string>;
   selectedTab: number;
 }
@@ -21,12 +21,14 @@ export default class EmojiGrid extends React.Component<
 
     const defaultSelectedTab = 0;
 
-    const emojiCategories = Object.keys(emojiMetadata)
-      .map((x) => emojiMetadata[x].group)
+    // Find and unique all possible emoji categories
+    const emojiCategories = Object.values(emojiMetadata)
+      .map((x) => x.group)
       .filter((category: string, index: number, self: Array<string>) => {
         return self.indexOf(category) === index;
       });
 
+    // Filter the currently shown emoji to the default tabs (Smileys & Emotion)
     const currentEmoji = Object.entries(emojiMetadata)
       .filter(
         ([key, value]) => value.group === emojiCategories[defaultSelectedTab]
@@ -35,7 +37,7 @@ export default class EmojiGrid extends React.Component<
 
     this.state = {
       currentEmoji: currentEmoji,
-      emojiData: emojiMetadata,
+      emojiMetadata: emojiMetadata,
       emojiCategories: emojiCategories,
       selectedTab: defaultSelectedTab,
     };
@@ -73,12 +75,10 @@ export default class EmojiGrid extends React.Component<
               justifyItems: "center",
             }}
           >
-            <ImageList cols={8} gap={4}>
-              {this.state.currentEmoji
-                .filter((item) => !problemChildren.includes(item))
-                .map((item) => {
-                  return <Emoji name={item} />;
-                })}
+            <ImageList cols={8} gap={1}>
+              {this.state.currentEmoji.map((emojiName) => {
+                return <Emoji name={emojiName} />;
+              })}
             </ImageList>
           </Box>
         </Container>
@@ -101,24 +101,7 @@ export default class EmojiGrid extends React.Component<
   }
 }
 
-// These emoji have various issues and need to be manually fixed or redirected
-const problemChildren = [
-  "Foot",
-  "Handshake",
-  "Heavy dollar sign",
-  "Man with bunny ears",
-  "Man wrestling",
-  "Mans shoe",
-  "O button blood type",
-  "Person genie",
-  "Person wrestling",
-  "Skier",
-  "Troll",
-  "Woman with bunny ears",
-  "Woman wrestling",
-];
-
-export interface EmojiData {
+export interface EmojiMetadata {
   [emojiName: string]: FluentEmoji;
 }
 
@@ -128,10 +111,21 @@ export interface FluentEmoji {
   glyph: string;
   glyphAsUtfInEmoticons?: string[];
   group: string;
+  isSkintoneBased: boolean;
+  styles?: FluentEmojiStyles;
+  skintones?: FluentEmojiSkintones;
   keywords: string[];
   mappedToEmoticons?: string[];
   sortOrder: number;
   tts: string;
   unicode: string;
   unicodeSkintones?: string[];
+}
+
+export interface FluentEmojiStyles {
+  [style: string]: string;
+}
+
+export interface FluentEmojiSkintones {
+  [skintone: string]: FluentEmojiStyles;
 }

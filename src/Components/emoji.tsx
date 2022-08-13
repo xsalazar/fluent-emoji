@@ -1,27 +1,36 @@
 import {
   Box,
   Button,
+  FormControl,
   Grid,
   IconButton,
   ImageList,
   ImageListItem,
+  InputLabel,
+  MenuItem,
   Modal,
+  Select,
+  SelectChangeEvent,
   Typography,
 } from "@mui/material";
 import React from "react";
-import { EmojiData, FluentEmoji } from "./emoji-grid";
+import { EmojiMetadata } from "./emoji-grid";
 import CloseIcon from "@mui/icons-material/Close";
 import { DownloadIcon } from "@primer/octicons-react";
 import axios from "axios";
-const emojiMetadata: EmojiData = require("./metadata.json");
+const emojiMetadata: EmojiMetadata = require("./metadata.json");
 
 interface EmojiProps {
   name: string;
 }
 
 interface EmojiState {
-  emojiData: EmojiData;
-  modalState: { isOpen: boolean; selectedSkintone: string };
+  emojiMetadata: EmojiMetadata;
+  modalState: {
+    isOpen: boolean;
+    selectedSkintone: Skintones;
+    selectedStyle: Styles;
+  };
 }
 
 const modalStyle = {
@@ -35,47 +44,96 @@ const modalStyle = {
   p: 2,
 };
 
+enum Skintones {
+  Default = "Default",
+  Light = "Light",
+  MediumLight = "MediumLight",
+  Medium = "Medium",
+  MediumDark = "MediumDark",
+  Dark = "Dark",
+}
+
+const SortedSkintones = [
+  "Default",
+  "Light",
+  "MediumLight",
+  "Medium",
+  "MediumDark",
+  "Dark",
+];
+
+enum Styles {
+  "3D" = "3D",
+  Color = "Color",
+  Flat = "Flat",
+  HighContrast = "HighContrast",
+}
+
 export default class Emoji extends React.Component<EmojiProps, EmojiState> {
   constructor(props: EmojiProps) {
     super(props);
 
     this.state = {
-      emojiData: emojiMetadata,
+      emojiMetadata: emojiMetadata,
       modalState: {
         isOpen: false,
-        selectedSkintone: "Default",
+        selectedSkintone: Skintones.Default,
+        selectedStyle: Styles["3D"],
       },
     };
 
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.handleVariationClick = this.handleVariationClick.bind(this);
+    this.handleStyleChanged = this.handleStyleChanged.bind(this);
     this.handleDownloadClick = this.handleDownloadClick.bind(this);
   }
 
   render() {
     const { name: emojiName } = this.props;
-    var entry = this.state.emojiData[emojiName];
+    const { emojiMetadata, modalState } = this.state;
+    const emoji = emojiMetadata[emojiName];
+
+    var emojiImageUrl: string;
+    var modalEmojiImageUrl: string;
+    var possibleEmojiStyles: Array<Styles>;
+    if (emoji.isSkintoneBased && emoji.skintones) {
+      // The base page emoji will always show 3D with Default skintone
+      emojiImageUrl = emoji.skintones[Skintones.Default][Styles["3D"]];
+
+      // The modal can change based on the selected skintone within the modal
+      modalEmojiImageUrl =
+        emoji.skintones[modalState.selectedSkintone][modalState.selectedStyle];
+
+      // Gather all the supported Styles for the selected modal skintone
+      possibleEmojiStyles = Object.keys(
+        emoji.skintones[modalState.selectedSkintone]
+      ).map((style) => Styles[style as keyof typeof Styles]);
+    } else {
+      // The base page emoji will always show 3D with Default skintone
+      emojiImageUrl = emoji.styles![Styles["3D"]];
+      modalEmojiImageUrl = emoji.styles![modalState.selectedStyle];
+      possibleEmojiStyles = Object.keys(emoji.styles!).map(
+        (style) => Styles[style as keyof typeof Styles]
+      );
+    }
 
     return (
       <div>
+        {/* Base Page Image */}
         <ImageListItem
           onClick={this.openModal}
-          key={entry.cldr}
+          key={emoji.cldr}
           sx={{
             maxWidth: 64,
             borderRadius: 2,
-            padding: 0.5,
+            padding: 0.25,
             "&:hover": {
               backgroundColor: () => this.getRandomBackgroundColor(),
             },
           }}
         >
-          <img
-            src={`${this.getEmojiImageUrl(emojiName, entry)}`}
-            alt={entry.cldr}
-            loading="lazy"
-          />
+          <img src={emojiImageUrl} alt={emoji.cldr} loading="lazy" />
         </ImageListItem>
 
         {/* Modal */}
@@ -100,75 +158,96 @@ export default class Emoji extends React.Component<EmojiProps, EmojiState> {
                 </Grid>
               </Grid>
 
-              {/* Image */}
+              {/* Modal Image */}
               <Grid
                 item
+                container
                 xs={12}
                 sx={{ p: 1, pb: 2, display: "flex", justifyContent: "center" }}
               >
                 <img
-                  src={`${this.getEmojiImageUrl(
-                    emojiName,
-                    entry,
-                    this.state.modalState.selectedSkintone
-                  )}`}
-                  alt={entry.cldr}
+                  style={{ width: "100%" }}
+                  src={modalEmojiImageUrl}
+                  alt={emoji.cldr}
                 />
               </Grid>
 
-              {/* Variations */}
-              {entry.unicodeSkintones && entry.unicodeSkintones.length > 1 ? (
+              {/* Skintone Variations */}
+              {emoji.isSkintoneBased && emoji.skintones ? (
                 <Grid item xs={12}>
                   <ImageList cols={6}>
-                    {orderedSkintones.map((skintone: string) => {
-                      return (
-                        <ImageListItem
-                          onClick={(event) =>
-                            this.handleVariationClick(skintone, event)
-                          }
-                          key={`${entry.cldr}_${skintone}`}
-                          sx={{
-                            textAlign: "center",
-                            borderRadius: 2,
-                            padding: 0.5,
-                            backgroundColor: (theme) =>
-                              skintone ===
-                              this.state.modalState.selectedSkintone
-                                ? theme.palette.action.selected
-                                : "",
-                            "&:hover": {
+                    {Object.entries(emoji.skintones)
+                      .sort((a, b) => {
+                        return (
+                          SortedSkintones.indexOf(a[0]) -
+                          SortedSkintones.indexOf(b[0])
+                        );
+                      })
+                      .map(([skintone, style]) => {
+                        return (
+                          <ImageListItem
+                            onClick={(event) =>
+                              this.handleVariationClick(skintone, event)
+                            }
+                            key={`${emoji.cldr}_${skintone}`}
+                            sx={{
+                              textAlign: "center",
+                              borderRadius: 2,
+                              padding: 0.5,
                               backgroundColor: (theme) =>
-                                theme.palette.action.hover,
-                            },
-                          }}
-                        >
-                          <img
-                            src={`${this.getEmojiImageUrl(
-                              emojiName,
-                              entry,
-                              skintone
-                            )}`}
-                            alt={entry.cldr}
-                          />
-                        </ImageListItem>
-                      );
-                    })}
+                                Skintones[
+                                  skintone as keyof typeof Skintones
+                                ] === this.state.modalState.selectedSkintone
+                                  ? theme.palette.action.selected
+                                  : "",
+                              "&:hover": {
+                                backgroundColor: (theme) =>
+                                  theme.palette.action.hover,
+                              },
+                            }}
+                          >
+                            <img
+                              src={style[modalState.selectedStyle]}
+                              alt={emoji.cldr}
+                            />
+                          </ImageListItem>
+                        );
+                      })}
                   </ImageList>
                 </Grid>
               ) : (
                 <div></div>
               )}
 
-              {/* Download Button */}
+              {/* Download Options */}
               <Grid item container xs={12} justifyContent="center">
-                <Button
-                  color="secondary"
-                  variant="contained"
-                  onClick={this.handleDownloadClick}
-                  endIcon={<DownloadIcon />}
-                >
-                  Download
-                </Button>
+                {/* Emoji Style */}
+                <Grid item xs={6} sx={{ pr: 1 }}>
+                  <FormControl fullWidth size="small">
+                    <InputLabel>style</InputLabel>
+                    <Select
+                      label="format"
+                      value={this.state.modalState.selectedStyle}
+                      onChange={this.handleStyleChanged}
+                    >
+                      {possibleEmojiStyles.map((style) => {
+                        return <MenuItem value={style}>{style}</MenuItem>;
+                      })}
+                    </Select>
+                  </FormControl>
+                </Grid>
+
+                {/* Download Button */}
+                <Grid item xs={6} sx={{ pr: 1 }}>
+                  <Button
+                    color="secondary"
+                    variant="contained"
+                    onClick={this.handleDownloadClick}
+                    endIcon={<DownloadIcon />}
+                  >
+                    Download
+                  </Button>
+                </Grid>
               </Grid>
             </Grid>
           </Box>
@@ -195,30 +274,47 @@ export default class Emoji extends React.Component<EmojiProps, EmojiState> {
     this.setState({
       modalState: {
         ...this.state.modalState,
-        selectedSkintone: skintone,
+        selectedSkintone: Skintones[skintone as keyof typeof Skintones],
+      },
+    });
+  }
+
+  handleStyleChanged(
+    event: SelectChangeEvent<string>,
+    child: React.ReactNode
+  ): void {
+    this.setState({
+      modalState: {
+        ...this.state.modalState,
+        selectedStyle: Styles[event.target.value as keyof typeof Styles],
       },
     });
   }
 
   async handleDownloadClick() {
-    var response = await axios.get(
-      this.getEmojiImageUrl(
-        this.props.name,
-        this.state.emojiData[this.props.name],
-        this.state.modalState.selectedSkintone
-      ),
-      {
-        responseType: "blob",
-      }
-    );
+    const { name } = this.props;
+    const { emojiMetadata, modalState } = this.state;
+
+    var downloadUrl: string;
+    if (emojiMetadata[name].isSkintoneBased && emojiMetadata[name].skintones) {
+      downloadUrl =
+        emojiMetadata[name].skintones![modalState.selectedSkintone][
+          modalState.selectedStyle
+        ];
+    } else {
+      downloadUrl = emojiMetadata[name].styles![modalState.selectedStyle];
+    }
+
+    const downloadFilename = downloadUrl.split("/").pop()!;
+
+    var response = await axios.get(downloadUrl, {
+      responseType: "blob",
+    });
 
     const url = window.URL.createObjectURL(new Blob([response.data]));
     const link = document.createElement("a");
     link.href = url;
-    link.setAttribute(
-      "download",
-      `${this.props.name.replaceAll(" ", "-").toLowerCase()}.png`
-    );
+    link.setAttribute("download", downloadFilename);
     document.body.appendChild(link);
     link.click();
   }
@@ -237,34 +333,4 @@ export default class Emoji extends React.Component<EmojiProps, EmojiState> {
     ];
     return partyColors[Math.floor(Math.random() * partyColors.length)];
   }
-
-  getEmojiImageUrl(
-    emojiName: string,
-    fluentEmoji: FluentEmoji,
-    skintone?: string
-  ): string {
-    var imageName = emojiName.replaceAll(" ", "_").toLowerCase();
-    var imageSrc = "";
-    if (
-      fluentEmoji.unicodeSkintones &&
-      fluentEmoji.unicodeSkintones.length > 0
-    ) {
-      imageSrc = `https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/${emojiName}/${
-        skintone ?? "Default"
-      }/3D/${imageName}_3d_${skintone?.toLowerCase() ?? "default"}.png`;
-    } else {
-      imageSrc = `https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/${emojiName}/3D/${imageName}_3d.png`;
-    }
-
-    return imageSrc;
-  }
 }
-
-const orderedSkintones = [
-  "Default",
-  "Light",
-  "Medium-Light",
-  "Medium",
-  "Medium-Dark",
-  "Dark",
-];
