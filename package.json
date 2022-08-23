@@ -5,7 +5,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
-    "@mui/icons-material": "^5.8.4",
+    "@mui/icons-material": "^5.10.2",
     "@mui/material": "^5.10.2",
     "@primer/octicons-react": "^17.4.1",
     "@testing-library/jest-dom": "^5.16.5",
