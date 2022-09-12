@@ -53,7 +53,7 @@ fs.readdirSync(basePath).forEach((folder) => {
           .readdirSync(`${basePath}/${folder}/${skintoneDir}/${styleDir}`)
           .map(
             (fileName) =>
-              `https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/${folder}/${skintoneDir}/${styleDir}/${fileName}`
+              `https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/${folder}/${skintoneDir}/${styleDir}/${fileName}`
           )[0];
       });
 
@@ -81,7 +81,7 @@ fs.readdirSync(basePath).forEach((folder) => {
         .readdirSync(`${basePath}/${folder}/${styleDir}`)
         .map(
           (fileName) =>
-            `https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@main/assets/${folder}/${styleDir}/${fileName}`
+            `https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/${folder}/${styleDir}/${fileName}`
         )[0];
     });
 
