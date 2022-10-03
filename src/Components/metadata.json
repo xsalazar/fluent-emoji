@@ -5602,14 +5602,6 @@
     "mappedToEmoticons": ["handshake"],
     "tts": "handshake",
     "unicode": "1f91d",
-    "unicodeSkintones": [
-      "1f91d",
-      "1f64f",
-      "1f64f 1f3fb",
-      "1f64f 1f3fc",
-      "1f64f 1f3fd",
-      "1f64f 1f3fe"
-    ],
     "sortOrder": 200,
     "isSkintoneBased": false,
     "styles": {
@@ -6038,12 +6030,44 @@
       "1f9b6 1f3ff"
     ],
     "sortOrder": 209,
-    "isSkintoneBased": false,
-    "styles": {
-      "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Foot/3D/foot_3d.png",
-      "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Foot/Color/foot_color.svg",
-      "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Foot/Flat/foot_flat.svg",
-      "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Foot/High Contrast/foot_high_contrast.svg"
+    "isSkintoneBased": true,
+    "skintones": {
+      "Dark": {
+        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Foot/Dark/3D/foot_3d_dark.png",
+        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Foot/Dark/Color/foot_color_dark.svg",
+        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Foot/Dark/Flat/foot_flat_dark.svg",
+        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Foot/Default/High Contrast/foot_high_contrast_default.svg"
+      },
+      "Default": {
+        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Foot/Default/3D/foot_3d_default.png",
+        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Foot/Default/Color/foot_color_default.svg",
+        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Foot/Default/Flat/foot_flat_default.svg",
+        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Foot/Default/High Contrast/foot_high_contrast_default.svg"
+      },
+      "Light": {
+        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Foot/Light/3D/foot_3d_light.png",
+        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Foot/Light/Color/foot_color_light.svg",
+        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Foot/Light/Flat/foot_flat_light.svg",
+        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Foot/Default/High Contrast/foot_high_contrast_default.svg"
+      },
+      "Medium": {
+        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Foot/Medium/3D/foot_3d_medium.png",
+        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Foot/Medium/Color/foot_color_medium.svg",
+        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Foot/Medium/Flat/foot_flat_medium.svg",
+        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Foot/Default/High Contrast/foot_high_contrast_default.svg"
+      },
+      "MediumDark": {
+        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Foot/Medium-Dark/3D/foot_3d_medium-dark.png",
+        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Foot/Medium-Dark/Color/foot_color_medium-dark.svg",
+        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Foot/Medium-Dark/Flat/foot_flat_medium-dark.svg",
+        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Foot/Default/High Contrast/foot_high_contrast_default.svg"
+      },
+      "MediumLight": {
+        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Foot/Medium-Light/3D/foot_3d_medium-light.png",
+        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Foot/Medium-Light/Color/foot_color_medium-light.svg",
+        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Foot/Medium-Light/Flat/foot_flat_medium-light.svg",
+        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Foot/Default/High Contrast/foot_high_contrast_default.svg"
+      }
     }
   },
   "Ear": {
@@ -16165,14 +16189,6 @@
     "mappedToEmoticons": ["1f9de_genie"],
     "tts": "genie",
     "unicode": "1f9de",
-    "unicodeSkintones": [
-      "1f9de",
-      "1f9de 200d 2642 fe0f",
-      "1f9de 200d 2640 fe0f",
-      "1f9df",
-      "1f9df 200d 2642 fe0f",
-      "1f9df 200d 2640 fe0f"
-    ],
     "sortOrder": 388,
     "isSkintoneBased": false,
     "styles": {
@@ -16283,14 +16299,6 @@
     "keywords": ["fairy tale", "fantasy", "monster", "troll"],
     "tts": "troll",
     "unicode": "1f9cc",
-    "unicodeSkintones": [
-      "1f9cc",
-      "1f486",
-      "1f486 1f3fb",
-      "1f486 1f3fc",
-      "1f486 1f3fd",
-      "1f486 1f3fe"
-    ],
     "sortOrder": 394,
     "isSkintoneBased": false,
     "styles": {
@@ -18107,44 +18115,12 @@
     "tts": "people with bunny ears",
     "unicode": "1f46f",
     "sortOrder": 425,
-    "isSkintoneBased": true,
-    "skintones": {
-      "Dark": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person with bunny ears/Dark/3D/person_with_bunny_ears_3d_dark.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person with bunny ears/Dark/Color/person_with_bunny_ears_color_dark.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person with bunny ears/Dark/Flat/person_with_bunny_ears_flat_dark.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person with bunny ears/Default/High Contrast/person_with_bunny_ears_high_contrast_default.svg"
-      },
-      "Default": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person with bunny ears/Default/3D/person_with_bunny_ears_3d_default.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person with bunny ears/Default/Color/person_with_bunny_ears_color_default.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person with bunny ears/Default/Flat/person_with_bunny_ears_flat_default.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person with bunny ears/Default/High Contrast/person_with_bunny_ears_high_contrast_default.svg"
-      },
-      "Light": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person with bunny ears/Light/3D/person_with_bunny_ears_3d_light.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person with bunny ears/Light/Color/person_with_bunny_ears_color_light.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person with bunny ears/Light/Flat/person_with_bunny_ears_flat_light.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person with bunny ears/Default/High Contrast/person_with_bunny_ears_high_contrast_default.svg"
-      },
-      "Medium": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person with bunny ears/Medium/3D/person_with_bunny_ears_3d_medium.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person with bunny ears/Medium/Color/person_with_bunny_ears_color_medium.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person with bunny ears/Medium/Flat/person_with_bunny_ears_flat_medium.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person with bunny ears/Default/High Contrast/person_with_bunny_ears_high_contrast_default.svg"
-      },
-      "MediumDark": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person with bunny ears/Medium-Dark/3D/person_with_bunny_ears_3d_medium-dark.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person with bunny ears/Medium-Dark/Color/person_with_bunny_ears_color_medium-dark.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person with bunny ears/Medium-Dark/Flat/person_with_bunny_ears_flat_medium-dark.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person with bunny ears/Default/High Contrast/person_with_bunny_ears_high_contrast_default.svg"
-      },
-      "MediumLight": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person with bunny ears/Medium-Light/3D/person_with_bunny_ears_3d_medium-light.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person with bunny ears/Medium-Light/Color/person_with_bunny_ears_color_medium-light.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person with bunny ears/Medium-Light/Flat/person_with_bunny_ears_flat_medium-light.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person with bunny ears/Default/High Contrast/person_with_bunny_ears_high_contrast_default.svg"
-      }
+    "isSkintoneBased": false,
+    "styles": {
+      "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person with bunny ears/3D/person_with_bunny_ears_3d.png",
+      "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person with bunny ears/Color/person_with_bunny_ears_color.svg",
+      "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person with bunny ears/Flat/person_with_bunny_ears_flat.svg",
+      "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person with bunny ears/High Contrast/person_with_bunny_ears_high_contrast.svg"
     }
   },
   "Man with bunny ears": {
@@ -18163,44 +18139,12 @@
     "tts": "men with bunny ears",
     "unicode": "1f46f 200d 2642 fe0f",
     "sortOrder": 426,
-    "isSkintoneBased": true,
-    "skintones": {
-      "Dark": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man with bunny ears/Dark/3D/man_with_bunny_ears_3d_dark.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man with bunny ears/Dark/Color/man_with_bunny_ears_color_dark.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man with bunny ears/Dark/Flat/man_with_bunny_ears_flat_dark.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man with bunny ears/Default/High Contrast/man_with_bunny_ears_high_contrast_default.svg"
-      },
-      "Default": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man with bunny ears/Default/3D/man_with_bunny_ears_3d_default.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man with bunny ears/Default/Color/man_with_bunny_ears_color_default.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man with bunny ears/Default/Flat/man_with_bunny_ears_flat_default.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man with bunny ears/Default/High Contrast/man_with_bunny_ears_high_contrast_default.svg"
-      },
-      "Light": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man with bunny ears/Light/3D/man_with_bunny_ears_3d_light.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man with bunny ears/Light/Color/man_with_bunny_ears_color_light.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man with bunny ears/Light/Flat/man_with_bunny_ears_flat_light.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man with bunny ears/Default/High Contrast/man_with_bunny_ears_high_contrast_default.svg"
-      },
-      "Medium": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man with bunny ears/Medium/3D/man_with_bunny_ears_3d_medium.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man with bunny ears/Medium/Color/man_with_bunny_ears_color_medium.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man with bunny ears/Medium/Flat/man_with_bunny_ears_flat_medium.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man with bunny ears/Default/High Contrast/man_with_bunny_ears_high_contrast_default.svg"
-      },
-      "MediumDark": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man with bunny ears/Medium-Dark/3D/man_with_bunny_ears_3d_medium-dark.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man with bunny ears/Medium-Dark/Color/man_with_bunny_ears_color_medium-dark.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man with bunny ears/Medium-Dark/Flat/man_with_bunny_ears_flat_medium-dark.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man with bunny ears/Default/High Contrast/man_with_bunny_ears_high_contrast_default.svg"
-      },
-      "MediumLight": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man with bunny ears/Medium-Light/3D/man_with_bunny_ears_3d_medium-light.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man with bunny ears/Medium-Light/Color/man_with_bunny_ears_color_medium-light.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man with bunny ears/Medium-Light/Flat/man_with_bunny_ears_flat_medium-light.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man with bunny ears/Default/High Contrast/man_with_bunny_ears_high_contrast_default.svg"
-      }
+    "isSkintoneBased": false,
+    "styles": {
+      "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man with bunny ears/3D/man_with_bunny_ears_3d.png",
+      "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man with bunny ears/Color/man_with_bunny_ears_color.svg",
+      "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man with bunny ears/Flat/man_with_bunny_ears_flat.svg",
+      "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man with bunny ears/High Contrast/man_with_bunny_ears_high_contrast.svg"
     }
   },
   "Woman with bunny ears": {
@@ -18219,44 +18163,12 @@
     "tts": "women with bunny ears",
     "unicode": "1f46f 200d 2640 fe0f",
     "sortOrder": 427,
-    "isSkintoneBased": true,
-    "skintones": {
-      "Dark": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman with bunny ears/Dark/3D/woman_with_bunny_ears_3d_dark.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman with bunny ears/Dark/Color/woman_with_bunny_ears_color_dark.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman with bunny ears/Dark/Flat/woman_with_bunny_ears_flat_dark.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman with bunny ears/Default/High Contrast/woman_with_bunny_ears_high_contrast_default.svg"
-      },
-      "Default": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman with bunny ears/Default/3D/woman_with_bunny_ears_3d_default.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman with bunny ears/Default/Color/woman_with_bunny_ears_color_default.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman with bunny ears/Default/Flat/woman_with_bunny_ears_flat_default.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman with bunny ears/Default/High Contrast/woman_with_bunny_ears_high_contrast_default.svg"
-      },
-      "Light": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman with bunny ears/Light/3D/woman_with_bunny_ears_3d_light.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman with bunny ears/Light/Color/woman_with_bunny_ears_color_light.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman with bunny ears/Light/Flat/woman_with_bunny_ears_flat_light.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman with bunny ears/Default/High Contrast/woman_with_bunny_ears_high_contrast_default.svg"
-      },
-      "Medium": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman with bunny ears/Medium/3D/woman_with_bunny_ears_3d_medium.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman with bunny ears/Medium/Color/woman_with_bunny_ears_color_medium.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman with bunny ears/Medium/Flat/woman_with_bunny_ears_flat_medium.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman with bunny ears/Default/High Contrast/woman_with_bunny_ears_high_contrast_default.svg"
-      },
-      "MediumDark": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman with bunny ears/Medium-Dark/3D/woman_with_bunny_ears_3d_medium-dark.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman with bunny ears/Medium-Dark/Color/woman_with_bunny_ears_color_medium-dark.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman with bunny ears/Medium-Dark/Flat/woman_with_bunny_ears_flat_medium-dark.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman with bunny ears/Default/High Contrast/woman_with_bunny_ears_high_contrast_default.svg"
-      },
-      "MediumLight": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman with bunny ears/Medium-Light/3D/woman_with_bunny_ears_3d_medium-light.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman with bunny ears/Medium-Light/Color/woman_with_bunny_ears_color_medium-light.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman with bunny ears/Medium-Light/Flat/woman_with_bunny_ears_flat_medium-light.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman with bunny ears/Default/High Contrast/woman_with_bunny_ears_high_contrast_default.svg"
-      }
+    "isSkintoneBased": false,
+    "styles": {
+      "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman with bunny ears/3D/woman_with_bunny_ears_3d.png",
+      "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman with bunny ears/Color/woman_with_bunny_ears_color.svg",
+      "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman with bunny ears/Flat/woman_with_bunny_ears_flat.svg",
+      "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman with bunny ears/High Contrast/woman_with_bunny_ears_high_contrast.svg"
     }
   },
   "Person in steamy room": {
@@ -18702,44 +18614,12 @@
     "tts": "skier",
     "unicode": "26f7 fe0f",
     "sortOrder": 436,
-    "isSkintoneBased": true,
-    "skintones": {
-      "Dark": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Skier/Dark/3D/skier_3d_dark.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Skier/Dark/Color/skier_color_dark.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Skier/Dark/Flat/skier_flat_dark.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Skier/Default/High Contrast/skier_high_contrast_default.svg"
-      },
-      "Default": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Skier/Default/3D/skier_3d_default.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Skier/Default/Color/skier_color_default.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Skier/Default/Flat/skier_flat_default.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Skier/Default/High Contrast/skier_high_contrast_default.svg"
-      },
-      "Light": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Skier/Light/3D/skier_3d_light.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Skier/Light/Color/skier_color_light.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Skier/Light/Flat/skier_flat_light.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Skier/Default/High Contrast/skier_high_contrast_default.svg"
-      },
-      "Medium": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Skier/Medium/3D/skier_3d_medium.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Skier/Medium/Color/skier_color_medium.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Skier/Medium/Flat/skier_flat_medium.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Skier/Default/High Contrast/skier_high_contrast_default.svg"
-      },
-      "MediumDark": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Skier/Medium-Dark/3D/skier_3d_medium-dark.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Skier/Medium-Dark/Color/skier_color_medium-dark.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Skier/Medium-Dark/Flat/skier_flat_medium-dark.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Skier/Default/High Contrast/skier_high_contrast_default.svg"
-      },
-      "MediumLight": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Skier/Medium-Light/3D/skier_3d_medium-light.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Skier/Medium-Light/Color/skier_color_medium-light.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Skier/Medium-Light/Flat/skier_flat_medium-light.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Skier/Default/High Contrast/skier_high_contrast_default.svg"
-      }
+    "isSkintoneBased": false,
+    "styles": {
+      "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Skier/3D/skier_3d.png",
+      "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Skier/Color/skier_color.svg",
+      "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Skier/Flat/skier_flat.svg",
+      "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Skier/High Contrast/skier_high_contrast.svg"
     }
   },
   "Snowboarder": {
@@ -20418,44 +20298,12 @@
     "tts": "people wrestling",
     "unicode": "1f93c",
     "sortOrder": 465,
-    "isSkintoneBased": true,
-    "skintones": {
-      "Dark": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person wrestling/Dark/3D/person_wrestling_3d_dark.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person wrestling/Dark/Color/person_wrestling_color_dark.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person wrestling/Dark/Flat/person_wrestling_flat_dark.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person wrestling/Default/High Contrast/person_wrestling_high_contrast_default.svg"
-      },
-      "Default": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person wrestling/Default/3D/person_wrestling_3d_default.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person wrestling/Default/Color/person_wrestling_color_default.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person wrestling/Default/Flat/person_wrestling_flat_default.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person wrestling/Default/High Contrast/person_wrestling_high_contrast_default.svg"
-      },
-      "Light": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person wrestling/Light/3D/person_wrestling_3d_light.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person wrestling/Light/Color/person_wrestling_color_light.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person wrestling/Light/Flat/person_wrestling_flat_light.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person wrestling/Default/High Contrast/person_wrestling_high_contrast_default.svg"
-      },
-      "Medium": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person wrestling/Medium/3D/person_wrestling_3d_medium.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person wrestling/Medium/Color/person_wrestling_color_medium.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person wrestling/Medium/Flat/person_wrestling_flat_medium.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person wrestling/Default/High Contrast/person_wrestling_high_contrast_default.svg"
-      },
-      "MediumDark": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person wrestling/Medium-Dark/3D/person_wrestling_3d_medium-dark.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person wrestling/Medium-Dark/Color/person_wrestling_color_medium-dark.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person wrestling/Medium-Dark/Flat/person_wrestling_flat_medium-dark.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person wrestling/Default/High Contrast/person_wrestling_high_contrast_default.svg"
-      },
-      "MediumLight": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person wrestling/Medium-Light/3D/person_wrestling_3d_medium-light.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person wrestling/Medium-Light/Color/person_wrestling_color_medium-light.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person wrestling/Medium-Light/Flat/person_wrestling_flat_medium-light.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person wrestling/Default/High Contrast/person_wrestling_high_contrast_default.svg"
-      }
+    "isSkintoneBased": false,
+    "styles": {
+      "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person wrestling/3D/person_wrestling_3d.png",
+      "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person wrestling/Color/person_wrestling_color.svg",
+      "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person wrestling/Flat/person_wrestling_flat.svg",
+      "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Person wrestling/High Contrast/person_wrestling_high_contrast.svg"
     }
   },
   "Man wrestling": {
@@ -20468,44 +20316,12 @@
     "tts": "men wrestling",
     "unicode": "1f93c 200d 2642 fe0f",
     "sortOrder": 466,
-    "isSkintoneBased": true,
-    "skintones": {
-      "Dark": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man wrestling/Dark/3D/man_wrestling_3d_dark.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man wrestling/Dark/Color/man_wrestling_color_dark.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man wrestling/Dark/Flat/man_wrestling_flat_dark.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man wrestling/Default/High Contrast/man_wrestling_high_contrast_default.svg"
-      },
-      "Default": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man wrestling/Default/3D/man_wrestling_3d_default.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man wrestling/Default/Color/man_wrestling_color_default.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man wrestling/Default/Flat/man_wrestling_flat_default.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man wrestling/Default/High Contrast/man_wrestling_high_contrast_default.svg"
-      },
-      "Light": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man wrestling/Light/3D/man_wrestling_3d_light.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man wrestling/Light/Color/man_wrestling_color_light.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man wrestling/Light/Flat/man_wrestling_flat_light.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man wrestling/Default/High Contrast/man_wrestling_high_contrast_default.svg"
-      },
-      "Medium": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man wrestling/Medium/3D/man_wrestling_3d_medium.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man wrestling/Medium/Color/man_wrestling_color_medium.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man wrestling/Medium/Flat/man_wrestling_flat_medium.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man wrestling/Default/High Contrast/man_wrestling_high_contrast_default.svg"
-      },
-      "MediumDark": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man wrestling/Medium-Dark/3D/man_wrestling_3d_medium-dark.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man wrestling/Medium-Dark/Color/man_wrestling_color_medium-dark.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man wrestling/Medium-Dark/Flat/man_wrestling_flat_medium-dark.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man wrestling/Default/High Contrast/man_wrestling_high_contrast_default.svg"
-      },
-      "MediumLight": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man wrestling/Medium-Light/3D/man_wrestling_3d_medium-light.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man wrestling/Medium-Light/Color/man_wrestling_color_medium-light.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man wrestling/Medium-Light/Flat/man_wrestling_flat_medium-light.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man wrestling/Default/High Contrast/man_wrestling_high_contrast_default.svg"
-      }
+    "isSkintoneBased": false,
+    "styles": {
+      "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man wrestling/3D/man_wrestling_3d.png",
+      "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man wrestling/Color/man_wrestling_color.svg",
+      "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man wrestling/Flat/man_wrestling_flat.svg",
+      "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Man wrestling/High Contrast/man_wrestling_high_contrast.svg"
     }
   },
   "Woman wrestling": {
@@ -20518,44 +20334,12 @@
     "tts": "women wrestling",
     "unicode": "1f93c 200d 2640 fe0f",
     "sortOrder": 467,
-    "isSkintoneBased": true,
-    "skintones": {
-      "Dark": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman wrestling/Dark/3D/woman_wrestling_3d_dark.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman wrestling/Dark/Color/woman_wrestling_color_dark.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman wrestling/Dark/Flat/woman_wrestling_flat_dark.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman wrestling/Default/High Contrast/woman_wrestling_high_contrast_default.svg"
-      },
-      "Default": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman wrestling/Default/3D/woman_wrestling_3d_default.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman wrestling/Default/Color/woman_wrestling_color_default.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman wrestling/Default/Flat/woman_wrestling_flat_default.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman wrestling/Default/High Contrast/woman_wrestling_high_contrast_default.svg"
-      },
-      "Light": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman wrestling/Light/3D/woman_wrestling_3d_light.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman wrestling/Light/Color/woman_wrestling_color_light.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman wrestling/Light/Flat/woman_wrestling_flat_light.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman wrestling/Default/High Contrast/woman_wrestling_high_contrast_default.svg"
-      },
-      "Medium": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman wrestling/Medium/3D/woman_wrestling_3d_medium.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman wrestling/Medium/Color/woman_wrestling_color_medium.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman wrestling/Medium/Flat/woman_wrestling_flat_medium.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman wrestling/Default/High Contrast/woman_wrestling_high_contrast_default.svg"
-      },
-      "MediumDark": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman wrestling/Medium-Dark/3D/woman_wrestling_3d_medium-dark.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman wrestling/Medium-Dark/Color/woman_wrestling_color_medium-dark.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman wrestling/Medium-Dark/Flat/woman_wrestling_flat_medium-dark.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman wrestling/Default/High Contrast/woman_wrestling_high_contrast_default.svg"
-      },
-      "MediumLight": {
-        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman wrestling/Medium-Light/3D/woman_wrestling_3d_medium-light.png",
-        "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman wrestling/Medium-Light/Color/woman_wrestling_color_medium-light.svg",
-        "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman wrestling/Medium-Light/Flat/woman_wrestling_flat_medium-light.svg",
-        "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman wrestling/Default/High Contrast/woman_wrestling_high_contrast_default.svg"
-      }
+    "isSkintoneBased": false,
+    "styles": {
+      "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman wrestling/3D/woman_wrestling_3d.png",
+      "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman wrestling/Color/woman_wrestling_color.svg",
+      "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman wrestling/Flat/woman_wrestling_flat.svg",
+      "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Woman wrestling/High Contrast/woman_wrestling_high_contrast.svg"
     }
   },
   "Person playing water polo": {
