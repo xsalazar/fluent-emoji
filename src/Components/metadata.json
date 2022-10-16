@@ -27733,6 +27733,7 @@
     "isSkintoneBased": false,
     "styles": {
       "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Playground slide/3D/playground_slide_3d.png",
+      "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Playground slide/Color/playground_slide_color.svg",
       "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Playground slide/Flat/playground_slide_flat.svg",
       "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Playground slide/High Contrast/playground_slide_high_contrast.svg"
     }
