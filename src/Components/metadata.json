@@ -40688,7 +40688,7 @@
       "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Vs button/High Contrast/vs_button_high_contrast.svg"
     }
   },
-  "Japanese hear button": {
+  "Japanese here button": {
     "cldr": "Japanese “here” button",
     "fromVersion": "0.6",
     "glyph": "🈁",
@@ -40707,10 +40707,10 @@
     "sortOrder": 1535,
     "isSkintoneBased": false,
     "styles": {
-      "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Japanese hear button/3D/japanese_hear_button_3d.png",
-      "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Japanese hear button/Color/japanese_hear_button_color.svg",
-      "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Japanese hear button/Flat/japanese_hear_button_flat.svg",
-      "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Japanese hear button/High Contrast/japanese_hear_button_high_contrast.svg"
+      "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Japanese here button/3D/japanese_here_button_3d.png",
+      "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Japanese here button/Color/japanese_here_button_color.svg",
+      "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Japanese here button/Flat/japanese_here_button_flat.svg",
+      "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Japanese here button/High Contrast/japanese_here_button_high_contrast.svg"
     }
   },
   "Japanese service charge button": {
