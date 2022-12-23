@@ -9,7 +9,7 @@
     "@mui/material": "^5.11.1",
     "@primer/octicons-react": "^17.10.0",
     "@types/react": "^18.0.26",
-    "@types/react-dom": "^18.0.9",
+    "@types/react-dom": "^18.0.10",
     "axios": "^1.2.1",
     "eslint-config-react-app": "^7.0.1",
     "react": "^18.2.0",
