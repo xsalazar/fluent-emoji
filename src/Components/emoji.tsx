@@ -133,11 +133,11 @@ export default class Emoji extends React.Component<EmojiProps, EmojiState> {
           }}
         >
           <img
+            loading="lazy"
             width="32px"
             height="32px"
             src={emojiImageUrl}
             alt={emoji.cldr}
-            loading="lazy"
           />
         </ImageListItem>
 
@@ -212,6 +212,7 @@ export default class Emoji extends React.Component<EmojiProps, EmojiState> {
                             }}
                           >
                             <img
+                              loading="lazy"
                               src={style[modalState.selectedStyle]}
                               alt={emoji.cldr}
                             />
