@@ -14430,6 +14430,7 @@
         "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Pregnant person/Default/High Contrast/pregnant_person_high_contrast_default.svg"
       },
       "MediumDark": {
+        "3D": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Pregnant person/Medium-Dark/3D/pregnant_person_3d_medium-dark.png",
         "Color": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Pregnant person/Medium-Dark/Color/pregnant_person_color_medium-dark.svg",
         "Flat": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Pregnant person/Medium-Dark/Flat/pregnant_person_flat_medium-dark.svg",
         "HighContrast": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Pregnant person/Default/High Contrast/pregnant_person_high_contrast_default.svg"
