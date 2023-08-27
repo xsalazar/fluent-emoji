@@ -1,6 +1,6 @@
 # 🚀 Fluent Emoji
 
-This repository contains the source code for the website [https://fluentemoji.com](https://fluentemoji.com) and was bootstrapped using [`create-react-app`](https://github.com/facebook/create-react-app).
+This repository contains the source code for the website [https://fluentemoji.com](https://fluentemoji.com).
 
 This website allows for browsing Microsoft's "familiar, friendly, and modern emoji". Including additional features such as: browsing supported skintones, swapping illustration styles, and downloading the source images for quick reference and reuse.
 

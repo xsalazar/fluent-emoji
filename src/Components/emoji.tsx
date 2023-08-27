@@ -18,7 +18,7 @@ import { EmojiMetadata } from "./emoji-grid";
 import CloseIcon from "@mui/icons-material/Close";
 import { DownloadIcon } from "@primer/octicons-react";
 import axios from "axios";
-const emojiMetadata: EmojiMetadata = require("./metadata.json");
+import emojiMetadata from "./metadata.json";
 
 interface EmojiProps {
   name: string;

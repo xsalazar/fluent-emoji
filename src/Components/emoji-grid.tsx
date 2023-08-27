@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Container, Tab, Tabs } from "@mui/material";
 import { imageListItemClasses } from "@mui/material/ImageListItem";
 import Emoji from "./emoji";
-const emojiMetadata: EmojiMetadata = require("./metadata.json");
+import emojiMetadata from "./metadata.json";
 
 interface EmojiGridProps {}
 
