@@ -31,7 +31,7 @@
     "@mui/icons-material": "^5.14.16",
     "@mui/material": "^5.14.16",
     "@primer/octicons-react": "^19.8.0",
-    "@types/react": "^18.2.33",
+    "@types/react": "^18.2.34",
     "@types/react-dom": "^18.2.14",
     "@vitejs/plugin-react": "^4.1.0",
     "axios": "^1.6.0",
