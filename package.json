@@ -2,6 +2,7 @@
   "name": "fluent-emoji",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "vite build",
     "serve": "vite preview",
@@ -17,12 +18,6 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
-    ]
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
     ]
   },
   "devDependencies": {
