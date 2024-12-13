@@ -25,7 +25,7 @@
     "@emotion/styled": "^11.14.0",
     "@mui/icons-material": "^5.16.11",
     "@mui/material": "^5.16.11",
-    "@primer/octicons-react": "^19.13.0",
+    "@primer/octicons-react": "^19.14.0",
     "@types/react": "^18.3.13",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.4",
