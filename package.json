@@ -24,7 +24,7 @@
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@mui/icons-material": "^5.16.14",
-    "@mui/material": "^5.16.13",
+    "@mui/material": "^5.16.14",
     "@primer/octicons-react": "^19.14.0",
     "@types/react": "^19.0.3",
     "@types/react-dom": "^19.0.2",
