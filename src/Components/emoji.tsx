@@ -146,14 +146,13 @@ export default class Emoji extends React.Component<EmojiProps, EmojiState> {
           <Box sx={modalStyle}>
             <Grid container>
               {/* Close Icon */}
-              <Grid item container xs={12} sx={{ pb: 1 }}>
-                <Grid item xs={10} sx={{ pl: 1 }} alignSelf="center">
+              <Grid container size={12} sx={{ pb: 1 }}>
+                <Grid size={10} sx={{ pl: 1 }} alignSelf="center">
                   <Typography>{this.props.name}</Typography>
                 </Grid>
                 <Grid
-                  item
                   container
-                  xs={2}
+                  size={2}
                   justifyContent="flex-end"
                   alignSelf="center"
                 >
@@ -165,9 +164,8 @@ export default class Emoji extends React.Component<EmojiProps, EmojiState> {
 
               {/* Modal Image */}
               <Grid
-                item
                 container
-                xs={12}
+                size={12}
                 sx={{ p: 1, pb: 2, display: "flex", justifyContent: "center" }}
               >
                 <img
@@ -179,7 +177,7 @@ export default class Emoji extends React.Component<EmojiProps, EmojiState> {
 
               {/* Skintone Variations */}
               {emoji.isSkintoneBased && emoji.skintones ? (
-                <Grid item xs={12}>
+                <Grid size={12}>
                   <ImageList cols={6}>
                     {Object.entries(emoji.skintones)
                       .sort((a, b) => {
@@ -226,9 +224,9 @@ export default class Emoji extends React.Component<EmojiProps, EmojiState> {
               )}
 
               {/* Download Options */}
-              <Grid item container xs={12} justifyContent="center">
+              <Grid container size={12} justifyContent="center">
                 {/* Emoji Style */}
-                <Grid item xs={6} sx={{ pr: 1 }}>
+                <Grid size={6} sx={{ pr: 1 }}>
                   <FormControl fullWidth size="small">
                     <InputLabel>style</InputLabel>
                     <Select
@@ -248,7 +246,7 @@ export default class Emoji extends React.Component<EmojiProps, EmojiState> {
                 </Grid>
 
                 {/* Download Button */}
-                <Grid item xs={6} sx={{ pr: 1 }}>
+                <Grid size={6} sx={{ pr: 1 }}>
                   <Button
                     color="secondary"
                     variant="contained"
