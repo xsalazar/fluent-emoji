@@ -33,7 +33,7 @@
     "eslint-config-react-app": "^7.0.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "typescript": "^5.8.2",
+    "typescript": "^5.8.3",
     "vite": "^6.2.5",
     "vite-tsconfig-paths": "^5.1.4"
   }
