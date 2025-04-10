@@ -1,125 +1,102 @@
-import React from "react";
-import { Box, Container, Tab, Tabs } from "@mui/material";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
 import { imageListItemClasses } from "@mui/material/ImageListItem";
+import Tab from "@mui/material/Tab";
+import Tabs from "@mui/material/Tabs";
+import { useState } from "react";
 import Emoji from "./emoji";
 import emojiMetadata from "./metadata.json";
 
-interface EmojiGridProps {}
+export default function EmojiGrid() {
+  const defaultSelectedTab = 0;
 
-interface EmojiGridState {
-  currentEmoji: Array<string>;
-  emojiMetadata: EmojiMetadata;
-  emojiCategories: Array<string>;
-  selectedTab: number;
-}
+  // Find and unique all possible emoji categories
+  const emojiCategories = Object.values(emojiMetadata)
+    .map((x) => x.group)
+    .filter((category: string, index: number, self: Array<string>) => {
+      return self.indexOf(category) === index;
+    });
 
-export default class EmojiGrid extends React.Component<
-  EmojiGridProps,
-  EmojiGridState
-> {
-  constructor(props: EmojiGridProps) {
-    super(props);
+  // Filter the currently shown emoji to the default tabs (Smileys & Emotion)
+  const defaultCurrentEmoji = Object.entries(emojiMetadata)
+    .filter(
+      ([key, value]) => value.group === emojiCategories[defaultSelectedTab]
+    )
+    .map((x) => x[0]);
 
-    const defaultSelectedTab = 0;
+  const [currentEmoji, setCurrentEmoji] = useState(defaultCurrentEmoji);
+  const [selectedTab, setSelectedTab] = useState(defaultSelectedTab);
 
-    // Find and unique all possible emoji categories
-    const emojiCategories = Object.values(emojiMetadata)
-      .map((x) => x.group)
-      .filter((category: string, index: number, self: Array<string>) => {
-        return self.indexOf(category) === index;
-      });
-
-    // Filter the currently shown emoji to the default tabs (Smileys & Emotion)
+  const handleSelectedTabChanged = (
+    _: React.SyntheticEvent,
+    selectedTab: number
+  ) => {
     const currentEmoji = Object.entries(emojiMetadata)
-      .filter(
-        ([key, value]) => value.group === emojiCategories[defaultSelectedTab]
-      )
+      .filter(([key, value]) => value.group === emojiCategories[selectedTab])
       .map((x) => x[0]);
 
-    this.state = {
-      currentEmoji: currentEmoji,
-      emojiMetadata: emojiMetadata,
-      emojiCategories: emojiCategories,
-      selectedTab: defaultSelectedTab,
-    };
+    setCurrentEmoji(currentEmoji);
+    setSelectedTab(selectedTab);
+  };
 
-    this.handleSelectedTabChanged = this.handleSelectedTabChanged.bind(this);
-  }
+  return (
+    <Container
+      maxWidth="sm"
+      sx={{
+        flexGrow: 1,
+        display: "flex",
+        flexDirection: "column",
+        overflowY: "auto",
+      }}
+    >
+      {/* Tabs */}
+      <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+        <Tabs
+          value={selectedTab}
+          onChange={handleSelectedTabChanged}
+          variant="scrollable"
+          textColor="secondary"
+          indicatorColor="secondary"
+          scrollButtons
+          allowScrollButtonsMobile
+        >
+          {emojiCategories.map((category: string) => {
+            return <Tab label={category} key={category}></Tab>;
+          })}
+        </Tabs>
+      </Box>
 
-  render(): React.ReactNode {
-    return (
-      <Container
-        maxWidth="sm"
+      {/* Emoji List */}
+      <Box
         sx={{
-          flexGrow: 1,
-          display: "flex",
-          flexDirection: "column",
-          overflowY: "auto",
+          mx: 3,
+          justifyItems: "center",
+          flexGrow: "1",
+          overflowY: "scroll",
         }}
       >
-        {/* Tabs */}
-        <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-          <Tabs
-            value={this.state.selectedTab}
-            onChange={this.handleSelectedTabChanged}
-            variant="scrollable"
-            textColor="secondary"
-            indicatorColor="secondary"
-            scrollButtons
-            allowScrollButtonsMobile
-          >
-            {this.state.emojiCategories.map((category: string) => {
-              return <Tab label={category} key={category}></Tab>;
-            })}
-          </Tabs>
-        </Box>
-
-        {/* Emoji List */}
         <Box
           sx={{
-            mx: 3,
-            justifyItems: "center",
-            flexGrow: "1",
-            overflowY: "scroll",
+            display: "grid",
+            gridTemplateColumns: {
+              xs: "repeat(4, 1fr)",
+              sm: "repeat(5, 1fr)",
+              md: "repeat(7, 1fr)",
+              lg: "repeat(7, 1fr)",
+              xl: "repeat(8, 1fr)",
+            },
+            [`& .${imageListItemClasses.root}`]: {
+              display: "flex",
+            },
           }}
         >
-          <Box
-            sx={{
-              display: "grid",
-              gridTemplateColumns: {
-                xs: "repeat(4, 1fr)",
-                sm: "repeat(5, 1fr)",
-                md: "repeat(7, 1fr)",
-                lg: "repeat(7, 1fr)",
-                xl: "repeat(8, 1fr)",
-              },
-              [`& .${imageListItemClasses.root}`]: {
-                display: "flex",
-              },
-            }}
-          >
-            {this.state.currentEmoji.map((emojiName) => {
-              return <Emoji name={emojiName} key={emojiName} />;
-            })}
-          </Box>
+          {currentEmoji.map((emojiName) => {
+            return <Emoji name={emojiName} />;
+          })}
         </Box>
-      </Container>
-    );
-  }
-
-  handleSelectedTabChanged(event: React.SyntheticEvent, selectedTab: number) {
-    const currentEmoji = Object.entries(emojiMetadata)
-      .filter(
-        ([key, value]) =>
-          value.group === this.state.emojiCategories[selectedTab]
-      )
-      .map((x) => x[0]);
-
-    this.setState({
-      currentEmoji,
-      selectedTab,
-    });
-  }
+      </Box>
+    </Container>
+  );
 }
 
 export interface EmojiMetadata {

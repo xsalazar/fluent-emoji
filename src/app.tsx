@@ -1,8 +1,7 @@
-import React from "react";
 import EmojiGrid from "./Components/emoji-grid";
 import Footer from "./Components/footer";
 
-function App() {
+export default function App() {
   return (
     <div
       style={{
@@ -17,5 +16,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
