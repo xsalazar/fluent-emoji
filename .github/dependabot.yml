@@ -5,8 +5,6 @@ updates:
     directory: "/"
     labels:
       - "dependabot :robot:"
-    reviewers:
-      - "xsalazar"
     schedule:
       interval: "daily"
 
@@ -15,8 +13,6 @@ updates:
     directory: "/scripts"
     labels:
       - "dependabot :robot:"
-    reviewers:
-      - "xsalazar"
     schedule:
       interval: "daily"
 
@@ -25,7 +21,5 @@ updates:
     directory: "/"
     labels:
       - "dependabot :robot:"
-    reviewers:
-      - "xsalazar"
     schedule:
       interval: "daily"
