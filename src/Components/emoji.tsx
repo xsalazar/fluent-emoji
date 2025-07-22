@@ -47,6 +47,7 @@ const SortedSkintones = [
 
 enum Styles {
   "3D" = "3D",
+  Animated = "Animated",
   Color = "Color",
   Flat = "Flat",
   HighContrast = "HighContrast",

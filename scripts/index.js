@@ -3,6 +3,7 @@ const emojiDatasource = require("emoji-datasource/emoji_pretty.json");
 
 var output = {};
 const basePath = "fluentui-emoji/assets/";
+const animatedBasePath = "fluentui-emoji-animated/assets/";
 
 const skintoneBasedDir = [
   "Dark",
@@ -57,6 +58,18 @@ fs.readdirSync(basePath).forEach((folder) => {
           )[0];
       });
 
+      // Check for animated version
+      if (
+        fs.existsSync(`${animatedBasePath}/${folder}/${skintoneDir}/animated/`)
+      ) {
+        styles["Animated"] = fs
+          .readdirSync(`${animatedBasePath}/${folder}/${skintoneDir}/animated/`)
+          .map(
+            (fileName) =>
+              `https://media.githubusercontent.com/media/microsoft/fluentui-emoji-animated/refs/heads/main/assets/${folder}/${skintoneDir}/animated/${fileName}`
+          )[0];
+      }
+
       // Add entry from skintone -> styles
       skintones = { ...skintones, [skintoneDir.replaceAll("-", "")]: styles };
     });
@@ -84,6 +97,16 @@ fs.readdirSync(basePath).forEach((folder) => {
             `https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/${folder}/${styleDir}/${fileName}`
         )[0];
     });
+
+    // Check for animated version
+    if (fs.existsSync(`${animatedBasePath}/${folder}/animated/`)) {
+      styles["Animated"] = fs
+        .readdirSync(`${animatedBasePath}/${folder}/animated/`)
+        .map(
+          (fileName) =>
+            `https://media.githubusercontent.com/media/microsoft/fluentui-emoji-animated/refs/heads/main/assets/${folder}/animated/${fileName}`
+        )[0];
+    }
 
     // Add entry for supported styles
     emojiEntry = { ...emojiEntry, styles: styles };
