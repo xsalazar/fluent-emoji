@@ -27,7 +27,7 @@
     "@mui/material": "^7.3.1",
     "@primer/octicons-react": "^19.15.5",
     "@types/react": "^19.1.11",
-    "@types/react-dom": "^19.1.7",
+    "@types/react-dom": "^19.1.8",
     "@vitejs/plugin-react": "^5.0.1",
     "axios": "^1.11.0",
     "eslint-config-react-app": "^7.0.1",
