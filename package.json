@@ -28,7 +28,7 @@
     "@primer/octicons-react": "^19.18.0",
     "@types/react": "^19.1.15",
     "@types/react-dom": "^19.1.9",
-    "@vitejs/plugin-react": "^5.0.3",
+    "@vitejs/plugin-react": "^5.0.4",
     "axios": "^1.12.2",
     "eslint-config-react-app": "^7.0.1",
     "react": "^19.1.1",
