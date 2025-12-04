@@ -31,7 +31,7 @@
     "@vitejs/plugin-react": "^5.1.1",
     "axios": "^1.13.2",
     "eslint-config-react-app": "^7.0.1",
-    "react": "^19.2.0",
+    "react": "^19.2.1",
     "react-dom": "^19.2.0",
     "typescript": "^5.9.3",
     "vite": "^7.2.6",
