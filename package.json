@@ -32,7 +32,7 @@
     "axios": "^1.13.3",
     "eslint-config-react-app": "^7.0.1",
     "react": "^19.2.3",
-    "react-dom": "^19.2.3",
+    "react-dom": "^19.2.4",
     "typescript": "^5.9.3",
     "vite": "^7.3.1",
     "vite-tsconfig-paths": "^6.0.5"
