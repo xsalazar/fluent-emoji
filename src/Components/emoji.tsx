@@ -14,7 +14,7 @@ import Typography from "@mui/material/Typography";
 import { DownloadIcon } from "@primer/octicons-react";
 import axios from "axios";
 import { useState } from "react";
-import emojiMetadata from "./metadata.json";
+import emojiMetadata from "./metadata.json" with { type: "json" };
 
 const modalStyle = {
   position: "absolute" as "absolute",

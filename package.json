@@ -8,18 +8,6 @@
     "serve": "vite preview",
     "start": "vite"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
   "devDependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
@@ -30,11 +18,8 @@
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.2.0",
     "axios": "^1.13.6",
-    "eslint-config-react-app": "^7.0.1",
     "react": "^19.2.3",
     "react-dom": "^19.2.4",
-    "typescript": "^5.9.3",
-    "vite": "^7.3.1",
-    "vite-tsconfig-paths": "^6.1.1"
+    "vite": "^8.0.1"
   }
 }

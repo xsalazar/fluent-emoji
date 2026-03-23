@@ -4,8 +4,8 @@ import { imageListItemClasses } from "@mui/material/ImageListItem";
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
 import { useState } from "react";
-import Emoji from "./emoji";
-import emojiMetadata from "./metadata.json";
+import Emoji from "./emoji.js";
+import emojiMetadata from "./metadata.json" with { type: "json" };
 
 export default function EmojiGrid() {
   const defaultSelectedTab = 0;

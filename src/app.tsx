@@ -1,5 +1,5 @@
-import EmojiGrid from "./Components/emoji-grid";
-import Footer from "./Components/footer";
+import EmojiGrid from "./Components/emoji-grid.js";
+import Footer from "./Components/footer.js";
 
 export default function App() {
   return (
