@@ -14,11 +14,11 @@
     "@mui/icons-material": "^7.3.9",
     "@mui/material": "^7.3.7",
     "@primer/octicons-react": "^19.28.0",
-    "@types/react": "^19.2.15",
+    "@types/react": "^19.2.16",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.2",
     "axios": "^1.16.1",
-    "react": "^19.2.6",
+    "react": "^19.2.7",
     "react-dom": "^19.2.6",
     "vite": "^8.0.14"
   }
