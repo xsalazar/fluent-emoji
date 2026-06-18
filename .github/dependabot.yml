@@ -7,7 +7,7 @@ updates:
       - "dependabot :robot:"
     schedule:
       interval: "daily"
-   cooldown:
+    cooldown:
       default-days: 14
       semver-major-days: 30
       semver-minor-days: 7
@@ -20,7 +20,7 @@ updates:
       - "dependabot :robot:"
     schedule:
       interval: "daily"
-   cooldown:
+    cooldown:
       default-days: 14
       semver-major-days: 30
       semver-minor-days: 7
