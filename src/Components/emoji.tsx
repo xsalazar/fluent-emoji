@@ -192,22 +192,27 @@ export default function Emoji({ name }: { name: string }) {
           alt={emoji.cldr}
         />
       </ImageListItem>
-
       {/* Modal */}
       <Modal open={modalState.isOpen} onClose={closeModal}>
         <Box sx={modalStyle}>
           <Grid container>
             {/* Close Icon */}
             <Grid container size={12} sx={{ pb: 1 }}>
-              <Grid size={10} sx={{ pl: 1 }} alignSelf="center">
+              <Grid
+                size={10}
+                sx={{
+                  alignSelf: "center",
+                  pl: 1
+                }}>
                 <Typography>{name}</Typography>
               </Grid>
               <Grid
                 container
                 size={2}
-                justifyContent="flex-end"
-                alignSelf="center"
-              >
+                sx={{
+                  justifyContent: "flex-end",
+                  alignSelf: "center"
+                }}>
                 <IconButton onClick={closeModal}>
                   <CloseIcon />
                 </IconButton>
@@ -273,7 +278,9 @@ export default function Emoji({ name }: { name: string }) {
             )}
 
             {/* Download Options */}
-            <Grid container size={12} justifyContent="center">
+            <Grid container size={12} sx={{
+              justifyContent: "center"
+            }}>
               {/* Emoji Style */}
               <Grid size={6} sx={{ pr: 1 }}>
                 <FormControl fullWidth size="small">
