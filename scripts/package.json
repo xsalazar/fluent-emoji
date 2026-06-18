@@ -5,6 +5,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "emoji-datasource": "^16.0.0"
+    "emoji-datasource": "~16.0.0"
   }
 }
